@@ -15,6 +15,10 @@ public class TicketOffice {
         this.tickets.addAll(Arrays.asList(tickets));
     }
 
+    /**
+     * getTicket
+     * @return Ticket
+     */
     public Ticket getTicket() {
         return tickets.remove(0);
     }
