@@ -1,4 +1,8 @@
+/**
+ * TicketSeller
+ */
 public class TicketSeller {
+
     private TicketOffice ticketOffice;
 
     public TicketSeller(TicketOffice ticketOffice) {

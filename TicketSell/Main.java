@@ -1,5 +1,8 @@
+/**
+ * Main
+ */
 public class Main {
-    
+
     public static void main(String[] args) {
         TicketOffice ticketOffice = new TicketOffice(Long.valueOf(100), new Ticket(), new Ticket());
         TicketSeller ticketSeller = new TicketSeller(ticketOffice);

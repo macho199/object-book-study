@@ -1,4 +1,8 @@
+/**
+ * Theater
+ */
 public class Theater {
+
     private TicketSeller ticketSeller;
 
     public Theater(TicketSeller ticketSeller) {
