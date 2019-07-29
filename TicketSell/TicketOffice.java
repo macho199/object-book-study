@@ -15,6 +15,13 @@ public class TicketOffice {
         this.tickets.addAll(Arrays.asList(tickets));
     }
 
+    /*    
+    public void sellTicketTo(Audience audience) {
+        // Audience에 의존되어 TicketOffice의 자율성이 낮아진다.
+        plusAmount(audience.buy(getTicket()));
+    }
+    */
+
     /**
      * getTicket
      * @return Ticket
