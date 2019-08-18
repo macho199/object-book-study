@@ -1,0 +1,19 @@
+@startuml
+
+class Reservation
+class Screening
+class Movie
+class DiscountPolicy
+class DiscountCondition
+
+Reservation "*" - "1" Screening
+Screening "*" - "1" Movie
+Movie "1" - "0..1" DiscountPolicy
+DiscountPolicy "1" - "1..*" DiscountCondition
+
+DiscountPolicy <|-- AmountDiscountPolicy
+DiscountPolicy <|-- PercentDiscountPolicy
+
+DiscountCondition <|-- SequenceCondition
+DiscountCondition <|-- PeriodCondition
+@endum

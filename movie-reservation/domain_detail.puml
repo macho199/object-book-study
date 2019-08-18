@@ -1,0 +1,41 @@
+@startuml
+
+class Movie {
+    + calculateMovieFee()
+}
+class DiscountPolicy {
+    + calculateDiscountAmount()
+    # getDiscountAmount()
+}
+
+class AmountDiscountPolicy {
+    # getDiscountAmount()
+}
+
+class PercentDiscountPolicy {
+    # getDiscountAmount()
+}
+
+
+interface DiscountCondition {
+    + isSatisfiedBy()
+}
+
+class SequenceCondition {
+    + isSatisfiedBy()
+}
+
+class PeriodCondition {
+    + isSatisfiedBy()
+}
+
+DiscountPolicy <- Movie : discountPolicy
+DiscountCondition "*" <- DiscountPolicy : conditions
+
+DiscountPolicy <|-- AmountDiscountPolicy
+DiscountPolicy <|-- PercentDiscountPolicy
+
+DiscountCondition <|.. SequenceCondition
+DiscountCondition <|.. PeriodCondition
+
+@enduml

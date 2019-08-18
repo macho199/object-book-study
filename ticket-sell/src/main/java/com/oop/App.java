@@ -1,9 +1,13 @@
-/**
- * Main
- */
-public class Main {
+package com.oop;
 
-    public static void main(String[] args) {
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
         TicketOffice ticketOffice = new TicketOffice(Long.valueOf(100), new Ticket(), new Ticket());
         TicketSeller ticketSeller = new TicketSeller(ticketOffice);
         Theater theater = new Theater(ticketSeller);
